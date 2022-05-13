@@ -6,7 +6,7 @@ namespace ConsoleApp_Dev
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World! Making changes");
 
             //test commit from laptop
             Console.ReadKey(); //this is used to pause the program...
