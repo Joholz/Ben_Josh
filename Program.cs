@@ -42,8 +42,10 @@ namespace ConsoleApp_Dev
 
             Boolean youWin = false; //this will tell us if the user got the answer right or not
 
+            int maximumNumberOfGuesses = 10; //we are going to give the user 10 guesses
+            int guessNumber = 0; //this is going to be how many guesses they user has used...since it is the beginning of the game, we set this to 0. We will increment this in the 'do while loop' as the user plays
             do { //start our guessing loop 
-
+                guessNumber = guessNumber + 1; //keep track of the user guesses. Everytime they guess again, we increase this number by 1
                 //get the value the user typed
                 string whatTheUserTyped = Console.ReadLine();
 
@@ -51,7 +53,6 @@ namespace ConsoleApp_Dev
                 int numberGuess1 = Convert.ToInt32(whatTheUserTyped); //we need to do this because we will compare numbers. Their number guessed VS Random number generated
 
                 if (numberGuess1 == theRandomNumber) { //check to see if their answer EQUALS the random number we generated
-                    //TODO BEN: add text here 
                     Console.WriteLine("Your guess was CORRECT");
                     youWin = true;
                 
@@ -60,16 +61,25 @@ namespace ConsoleApp_Dev
 
 
                 if (numberGuess1 < theRandomNumber) { //check to see if their answer is LOWER than the rnadom number we generated
-                    //TODO BEN: add text here 
                     Console.WriteLine("Your answer was too low, sorry man");
                 }
 
 
                 if (numberGuess1 > theRandomNumber) { //check to see if their answer it HIGHER than random number generated
-                    //TODO BEN: add text here 
                     Console.WriteLine("Your answer was too high, sorry man");
 
                 }
+
+
+                /****************************************************************************************/
+                //TODO BEN: Add 'if' condition to check if they have reached their maximum number of guesses
+                //          If they have used all of their guesses....we want to exit the game and tell them they lose
+                //          Exiting the game in this case will just be exiting this 'do while loop'
+                //          You may need to search "How to exit do while loop in c#" to find how to force exit this loop
+                //          link that may also help: https://www.tutorialsteacher.com/csharp/csharp-do-while-loop
+
+
+
 
             } while (youWin == false); //keep looping over and over again...we will do this until *youWin = true*....aka user got the answer right
 
