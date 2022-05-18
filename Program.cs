@@ -52,6 +52,8 @@ namespace ConsoleApp_Dev
 
                 if (numberGuess1 == theRandomNumber) { //check to see if their answer EQUALS the random number we generated
                     //TODO BEN: add text here 
+                    Console.WriteLine("Your guess was CORRECT");
+                    youWin = true;
                 
                 }
 
@@ -59,12 +61,13 @@ namespace ConsoleApp_Dev
 
                 if (numberGuess1 < theRandomNumber) { //check to see if their answer is LOWER than the rnadom number we generated
                     //TODO BEN: add text here 
-
+                    Console.WriteLine("Your answer was too low, sorry man");
                 }
 
 
                 if (numberGuess1 > theRandomNumber) { //check to see if their answer it HIGHER than random number generated
                     //TODO BEN: add text here 
+                    Console.WriteLine("Your answer was too high, sorry man");
 
                 }
 
