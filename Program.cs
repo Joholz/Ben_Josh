@@ -62,12 +62,24 @@ namespace ConsoleApp_Dev
 
                 if (numberGuess1 < theRandomNumber) { //check to see if their answer is LOWER than the rnadom number we generated
                     Console.WriteLine("Your answer was too low, sorry man");
+
                 }
 
 
                 if (numberGuess1 > theRandomNumber) { //check to see if their answer it HIGHER than random number generated
                     Console.WriteLine("Your answer was too high, sorry man");
 
+                }
+
+                if (guessNumber == maximumNumberOfGuesses)
+                {
+                    Console.WriteLine("You lose :(");
+                    
+                    Console.WriteLine("Press any key to exit");
+
+
+                    Console.ReadKey();
+                    Environment.Exit(0);
                 }
 
 
