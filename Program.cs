@@ -63,11 +63,21 @@ namespace ConsoleApp_Dev
                 if (numberGuess1 < theRandomNumber) { //check to see if their answer is LOWER than the rnadom number we generated
                     Console.WriteLine("Your answer was too low, sorry man");
 
+
+                    //BEN:TODO we want to say if they are close. If they are within 5 of theRandomNumber we tell them 'Just a little low'
+                    //This will need another 'IF' statement
+
                 }
 
 
                 if (numberGuess1 > theRandomNumber) { //check to see if their answer it HIGHER than random number generated
                     Console.WriteLine("Your answer was too high, sorry man");
+
+
+                    //BEN:TODO we want to say if they are close. If they are within 5 of theRandomNumber we tell them 'Just a little high'
+                    //This will need another 'IF' statement
+
+
 
                 }
 
@@ -83,17 +93,12 @@ namespace ConsoleApp_Dev
                 }
 
 
-                /****************************************************************************************/
-                //TODO BEN: Add 'if' condition to check if they have reached their maximum number of guesses
-                //          If they have used all of their guesses....we want to exit the game and tell them they lose
-                //          Exiting the game in this case will just be exiting this 'do while loop'
-                //          You may need to search "How to exit do while loop in c#" to find how to force exit this loop
-                //          link that may also help: https://www.tutorialsteacher.com/csharp/csharp-do-while-loop
-
-
 
 
             } while (youWin == false); //keep looping over and over again...we will do this until *youWin = true*....aka user got the answer right
+
+
+            //Ben:TODO tell user how many tries it took for them to get the correct number
 
 
             Console.WriteLine("Press any key to exit");
